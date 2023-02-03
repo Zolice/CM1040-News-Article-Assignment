@@ -1,0 +1,58 @@
+.social-media {
+    width: 100%;
+}
+
+.social-media-buttons {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 1em;
+}
+
+.social-media>h3 {
+    width: auto;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.social-media-buttons>img {
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+}
+
+.social-media-feed {
+    width: auto;
+    aspect-ratio: 9/16;
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5em;
+    background-color: lightgray;
+    overflow-y: auto;
+}
+
+.social-media-feed>article {
+    display: flex;
+    flex-direction: column;
+    background-color: gray;
+    row-gap: 0.5em;
+}
+
+.social-media-feed>article>div {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 3em 1fr;
+    column-gap: 0.5em;
+}
+
+.social-media-feed>article>div>img {
+    width: 3em;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    grid-row: 1/span 2;
+}
+
+.social-media-feed>article>h5 {
+    width: 100%;
+    text-align: left;
+}
