@@ -1,0 +1,23 @@
+<div id="news-main-highlight-carousel" class=""></div>
+
+<!-- <div id="news-highlight-main" class="news-highlight-main p-3 text-light">
+    <h3 class="m-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. </h3>
+    <em>18th January 2023, 4h ago</em>
+</div> -->
+<div id="news-secondary-highlight" class="news-highlight-secondary text-dark"></div>
+
+<script id="news-main-highlight-template" type="text/x-handlebars-template">
+    <div id="news-highlight-article" class="news-highlight-article text-light" style="display: grid;">
+        <img src="{{image}}">
+        <h4 class="m-0 pt-3 px-3">{{title}}</h3>
+        <em class="px-3">{{dateAndTime postDate}}</em>
+    </div>
+</script>
+
+<script id="news-secondary-highlight-template" type="text/x-handlebars-template">
+    <article id="news-highlight-secondary" style="display: flex;">
+        <img src="{{image}}">
+        <em>{{dateAndTime postDate}}</em>
+        <h5 class="m-0">{{title}}</h5>
+    </article>
+</script>

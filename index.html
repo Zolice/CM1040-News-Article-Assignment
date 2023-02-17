@@ -13,6 +13,7 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/general.js"></script>
 
@@ -23,68 +24,16 @@
 <body>
     <div id="header-div" class="header text-light"></div>
     <div id="hero-image" class="hero-image">
-        <img src="./images/sample-images/sample_background_image_1920x1280.jpg">
+        <img src="./images/splash-image-edited-resized.jpg">
     </div>
 
-    <div id="main-body" class="container py-2">
+    <div id="main-body" class="container py-3">
         <div class="row">
-            <div id="main-content" class="col-md-9 px-0">
-                <div id="news-highlights" class="news-highlights mb-2">
-                    <div id="news-highlight-main" class="news-highlight-main p-3 text-light">
-                        <h3 class="m-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </h3>
-                        <em>18th January 2023, 4h ago</em>
-                    </div>
-                    <div id="news-highlight-secondary" class="news-highlight-secondary text-dark">
-                        <article id="news-highlight-secondary-1">
-                            <img src="./images/sample-images/sample_card_image_640x450.jpg">
-                            <h5 class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h5>
-                            <em>18th January 2023, 4h ago</em>
-                        </article>
-                        <article id="news-highlight-secondary-2">
-                            <img src="./images/sample-images/sample_card_image_640x450.jpg">
-                            <h5 class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h5>
-                            <em>18th January 2023, 4h ago</em>
-                        </article>
-                        <div id="news-highlight-more-news">
-                            <img src="./images/right-arrow.png">
-                            <h5 class="m-0">View More from this category</h5>
-                            </article>
-                        </div>
-                    </div>
-                </div>
+            <div id="main-content" class="col-md-9 px-0 pr-2">
+                <div id="news-highlight" class="news-highlights mb-4"></div>
+                
                 <div id="news-list" class="news-list p-0">
                     <h3 class="m-0">Latest News</h3>
-
-                    <article id="news-list-1">
-                        <img src="./images/sample-images/sample_card_image_640x450.jpg" alt="image">
-                        <em>18th January 2023, 4h ago</em>
-                        <h5 class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h5>
-                        <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </article>
-                    <article id="news-list-2">
-                        <img src="./images/sample-images/sample_card_image_640x450.jpg" alt="image">
-                        <em>18th January 2023, 4h ago</em>
-                        <h5 class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h5>
-                        <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </article>
-                    <article id="news-list-3">
-                        <img src="./images/sample-images/sample_card_image_640x450.jpg" alt="image">
-                        <em>18th January 2023, 4h ago</em>
-                        <h5 class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h5>
-                        <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </article>
-                    <article id="news-list-4">
-                        <img src="./images/sample-images/sample_card_image_640x450.jpg" alt="image">
-                        <em>18th January 2023, 4h ago</em>
-                        <h5 class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h5>
-                        <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </article>
-                    <article id="news-list-5">
-                        <img src="./images/sample-images/sample_card_image_640x450.jpg" alt="image">
-                        <em>18th January 2023, 4h ago</em>
-                        <h5 class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. </h5>
-                        <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </article>
                 </div>
             </div>
             <div id="sidebar" class="col-md-3 px-0">
@@ -94,39 +43,7 @@
 
         
     </div>
-    <div id="footer" class="footer">
-        <div id="footer-container" class="footer-container container px-0 py-3">
-            <div class="row m-0">
-                <div id="footer-name-logo" class="footer-name-logo col-md-4 px-0">
-                    <a href="index.html"><img src="./images/newsforest-logo.png" alt="logo"></a>
-                    <h1 class="m-0">Newsforest</h1>
-                    <h4 class="m-0">Bringing the news to you</h4>
-                </div>
-
-                <div id="footer-category" class="footer-category col-md-4 px-0">
-                    <h3 class="m-0 mb-2">Categories</h3>
-                    <div id="footer-category-list" class="footer-category-list">
-                        <button id="footer-category-technology">Technology</button>
-                        <button id="footer-category-business">Business</button>
-                        <button id="footer-category-entertainment">Entertainment</button>
-                        <button id="footer-category-health">Health</button>
-                        <button id="footer-category-science">Science</button>
-                        <button id="footer-category-sports">Sports</button>
-                    </div>
-                </div>
-
-                <div id="footer-social" class="footer-social col-md-4 px-0">
-                    <h3 class="m-0 mb-2 px-4">Social Media</h3>
-                    <div id="social-media-buttons" class="social-media-buttons mb-3 px-4">
-                        <a href="https://www.facebook.com/globalsim/"><img src="./images/social-media/facebookLogo.png"
-                                alt="facebook"></a>
-                        <a href="https://twitter.com/LondonU"><img src="./images/social-media/twitterLogo.png"
-                                alt="twitter"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <footer id="footer" class="bg-dark"></footer>
 </body>
 
 </html>

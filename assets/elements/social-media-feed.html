@@ -7,43 +7,17 @@
                 alt="twitter"></a>
     </div>
 
-    <div id="social-media-feed" class="social-media-feed ml-2 mr-2 p-2">
-        <article id="social-media-feed-article-1" class="p-1">
-            <div>
-                <img src="./images/social-media/user-1.jpg">
-                <h5 class="m-0">Lee Krit</h5>
-                <em class="m-0">@LeeKrit</em>
-            </div>
-            <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-        </article>
-        <article id="social-media-feed-article-2" class="p-1">
-            <div>
-                <img src="./images/social-media/user-2.jpg">
-                <h5 class="m-0">Lee Krit</h5>
-                <em class="m-0">@LeeKrit</em>
-            </div>
-            <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            <img src="./images/sample-images/sample_card_image_640x450.jpg">
-        </article>
-
-
-        <article id="social-media-feed-article-2" class="p-1">
-            <div>
-                <img src="./images/social-media/user-2.jpg">
-                <h5 class="m-0">Lee Krit</h5>
-                <em class="m-0">@LeeKrit</em>
-            </div>
-            <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            <img src="./images/sample-images/sample_card_image_640x450.jpg">
-        </article>
-        <article id="social-media-feed-article-2" class="p-1">
-            <div>
-                <img src="./images/social-media/user-2.jpg">
-                <h5 class="m-0">Lee Krit</h5>
-                <em class="m-0">@LeeKrit</em>
-            </div>
-            <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
-            <img src="./images/sample-images/sample_card_image_640x450.jpg">
-        </article>
-    </div>
+    <div id="social-media-feed" class="social-media-feed ml-2 mr-2 p-2"></div>
 </div>
+
+<script id="social-media-feed-article-template" type="text/x-handlebars-template">
+    <article id="social-media-feed-article-1" class="p-1">
+            <div>
+                <img src="{{profileImageHelper profileImage}}">
+                <h5 class="m-0">{{nickname}}</h5>
+                <em class="m-0">{{username}}</em>
+            </div>
+            <p class="m-0">{{content}}</p>
+            <img src="{{image}}">
+        </article>
+</script>

@@ -67,23 +67,20 @@
     color: #f8f9fa;
 }
 
-.footer {
-    background-color: aliceblue;
-}
-
-.footer-name {
-    width: max-content;
+.footer-left{
+    display: flex;
+    justify-content: center;
 }
 
 .footer-name-logo {
     display: grid;
-    grid-template-columns: auto 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-columns: min-content 1fr;
+    grid-template-rows: min-content min-content;
     align-items: center;
-    width: 100%;
-    column-gap: 0.5em;
-    row-gap: 0.5em;
+    width: min-content;
+    column-gap: 1em;
     height: 100%;
+    margin: auto;
 }
 
 .footer-name-logo>h1 {
@@ -95,7 +92,16 @@
 .footer-name-logo>h4 {
     width: max-content;
     text-align: center;
-    grid-column: 1/span 2;
+    grid-column: 2;
+}
+
+.footer-name-logo>a {
+    grid-row: 1 / span 2;
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: none;
 }
 
 .footer-name-logo>a>img {
@@ -119,9 +125,8 @@
     flex-wrap: wrap;
 }
 
-.footer-category-list>button {
-    background: transparent;
-    border: none;
+.footer-links{
+    margin: auto;
 }
 
 .footer-social {
@@ -131,6 +136,12 @@
     column-gap: 1em;
     align-content: center;
     align-items: center;
+}
+
+.footer-container>em{
+    display: block;
+    width: 100%;
+    text-align: center;
 }
 
 .social-media {
@@ -219,4 +230,53 @@
 
 .link-text-light:hover {
     color: #f8f9fa !important;
+}
+
+.news-list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.news-list > article{
+    width: 100%;
+    height: 9em;
+    display: flex;
+    flex-direction: row;
+    grid-template-columns: 16em 1fr;
+    grid-template-rows: min-content min-content 1fr;
+    column-gap: 0.75em;
+}
+
+.news-list>article>img{
+    width: 18em;
+    height: 9em;
+    object-fit: cover;
+}
+
+.news-list-article-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 0.25em;
+    border-radius: 0.5em;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 0.5em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 0.5em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
