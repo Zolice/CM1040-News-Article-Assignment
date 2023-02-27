@@ -1,0 +1,40 @@
+.article-content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.article-header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.article-text {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.article-image {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+}
+
+.article-image>img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.article-image>em{
+    text-align: center;
+}
+
+.article-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
