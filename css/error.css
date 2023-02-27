@@ -1,0 +1,13 @@
+.error {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.error>h6 {
+    text-align: center;
+}
