@@ -58,7 +58,6 @@ var sidebar
 function generalOnload() {
     handlebarsHelper()
     addFooter()
-    addSidebar()
 }
 
 function handlebarsHelper() {
@@ -78,7 +77,7 @@ function handlebarsHelper() {
 }
 
 function setHeaderStyle(index) {
-    if(!index){
+    if (!index) {
         header.classList.add("header-light")
         darkHeader.style.display = "none"
         lightHeader.style.display = "flex"
@@ -127,4 +126,15 @@ function addSocialMedia() {
     socialMediaData.forEach(function (article) {
         document.getElementById("social-media-feed").innerHTML += socialMediaTemplate(article)
     })
+}
+
+function addNewsList(name, jQueryElement, newsListData) {
+    jQueryElement.load('./assets/elements/news-list.html', function () {
+        var newsList = Handlebars.compile(document.getElementById('news-list-template').innerHTML)
+        var newsListContent = document.getElementById("news-list")
+        if (!name) newsListContent.innerHTML = `<h3 class="m-0">${name}</h3>`
+        newsListData.forEach((news) => {
+            newsListContent.innerHTML += newsList(news)
+        })
+    });
 }

@@ -8,14 +8,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="./images/newsforest-logo.jpg">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/article.css">
     <link rel="stylesheet" href="./css/general.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Permanent+Marker">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/article.js"></script>
     <script src="./js/general.js"></script>
 
     <!-- <script type="text/html" id="header-template" src="./assets/elements/header.html"></script> -->
@@ -24,25 +24,28 @@
 
 <body>
     <div id="header-div" class="header text-light"></div>
-    <div id="hero-image" class="hero-image">
-        <img src="./images/splash-image-edited-resized.jpg">
-    </div>
 
-    <div id="main-body" class="container py-3">
+    <div id="main-body" class="container py-3 main-body-div">
         <div class="row">
             <div id="main-content" class="col-md-9 px-0 pr-2">
-                <div id="news-highlight" class="news-highlights mb-4"></div>
-                
-                <div id="news-list" class="news-list p-0">
-                    <h3 class="m-0">Latest News</h3>
+                <div id="article-content" class="article-content mb-4">
+                    <div id="article-header" class="article-header">
+                    </div>
+                    <div id="article-body" class="article-body">
+                        <div class="article-text">
+                        </div>
+                    </div>
                 </div>
             </div>
             <div id="sidebar" class="col-md-3 px-0">
-
+                <div class="article-info">
+                    <span class="article-author">aaaa</span>
+                    <span class="article-date">bb</span>
+                </div>
             </div>
         </div>
 
-        
+
     </div>
     <footer id="footer" class="bg-dark"></footer>
 </body>

@@ -152,6 +152,7 @@ var newsMainHighlightIndex = 999
 window.onload = () => {
     generalOnload()
     addHeader(true)
+    addSidebar()
     addNewsHighlight()
     addNewsList("Latest News", $('#news-list'), latestNewsData)
 }
@@ -162,16 +163,20 @@ function addNewsHighlight() {
         var newsSecondaryHighlight = Handlebars.compile(document.getElementById('news-secondary-highlight-template').innerHTML)
         var newsMainHighlightContent = document.getElementById("news-main-highlight-carousel")
         var newsSecondaryHighlightContent = document.getElementById("news-secondary-highlight")
+        var newsMainHighlightButtons = ""
 
         newsMainHighlightData.forEach((news) => {
             newsMainHighlightContent.innerHTML += newsMainHighlight(news)
+            newsMainHighlightButtons += document.getElementById("news-main-highlight-carousel-button").innerHTML
         })
 
         newsSecondaryHighlightData.forEach((news) => {
             newsSecondaryHighlightContent.innerHTML += newsSecondaryHighlight(news)
         })
 
-
+        console.log(newsMainHighlightButtons)
+        newsMainHighlightContent.innerHTML += document.getElementById("news-main-highlight-carousel-buttons").innerHTML
+        document.getElementById("news-main-highlight-carousel-buttons").innerHTML += newsMainHighlightButtons
         newsMainHighlightCarousel()
     });
 }
@@ -184,28 +189,16 @@ function newsMainHighlightCarousel() {
 
     for (let index = 0; index < allNews.length; index++) {
         if (index == newsMainHighlightIndex) {
-            allNews[index].style.display = "grid"
-            allNews[index].style.visibility = "visible"
+            allNews[index].style.opacity = "1"
+            allNews[index].style.height = "auto"
         } else {
-            allNews[index].style.display = "none"
-            allNews[index].style.visibility = "hidden"
+            allNews[index].style.opacity = "0"
+            allNews[index].style.height = "0"
         }
     }
-
     setTimeout(newsMainHighlightCarousel, 5000);
 }
 
 function newsMainHighlightCarouselNext() {
     // alert()
-}
-
-function addNewsList(name, jQueryElement, newsListData) {
-    jQueryElement.load('./assets/elements/news-list.html', function () {
-        var newsList = Handlebars.compile(document.getElementById('news-list-template').innerHTML)
-        var newsListContent = document.getElementById("news-list")
-        newsListContent.innerHTML = `<h3 class="m-0">${name}</h3>`
-        newsListData.forEach((news) => {
-            newsListContent.innerHTML += newsList(news)
-        })
-    });
 }

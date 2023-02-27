@@ -1,4 +1,4 @@
-<div id="news-main-highlight-carousel" class=""></div>
+<div id="news-main-highlight-carousel" class="news-main-highlight-carousel"></div>
 
 <!-- <div id="news-highlight-main" class="news-highlight-main p-3 text-light">
     <h3 class="m-0">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor, sit amet consectetur adipisicing elit. </h3>
@@ -7,10 +7,14 @@
 <div id="news-secondary-highlight" class="news-highlight-secondary text-dark"></div>
 
 <script id="news-main-highlight-template" type="text/x-handlebars-template">
-    <div id="news-highlight-article" class="news-highlight-article text-light" style="display: grid;">
-        <img src="{{image}}">
-        <h4 class="m-0 pt-3 px-3">{{title}}</h3>
-        <em class="px-3">{{dateAndTime postDate}}</em>
+    <div id="news-highlight-article" class="news-highlight-article text-light">
+        <div class="news-highlight-article-grid">
+            <img src="{{image}}">
+            <h4 class="m-0 pt-3 px-3">{{title}}</h3>
+            <em class="px-3">{{dateAndTime postDate}}</em>
+        </div>
+        <button class="news-main-highlight-right-button news-main-highlight-button text-light" onclick="newsMainHighlightCarouselNext()">></button>
+        <button class="news-main-highlight-left-button news-main-highlight-button text-light" onclick="newsMainHighlightCarouselBack()"><</button>
     </div>
 </script>
 
@@ -20,4 +24,12 @@
         <em>{{dateAndTime postDate}}</em>
         <h5 class="m-0">{{title}}</h5>
     </article>
+</script>
+
+<script id="news-main-highlight-carousel-buttons" type="text/x-handlebars-template">
+    <div id="news-main-highlight-carousel-buttons" class="news-main-highlight-carousel-buttons"></div>
+</script>
+
+<script id="news-main-highlight-carousel-button" type="text/x-handlebars-template">
+    <button class="news-main-highlight-carousel-button p-0" id="news-main-highlight-carousel-button"></button>
 </script>

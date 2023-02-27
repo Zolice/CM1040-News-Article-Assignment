@@ -2,6 +2,8 @@
     /* background-color: aliceblue; */
     background-image: linear-gradient(to bottom, black, transparent);
     position: fixed;
+    top: 0;
+    left: 0;
     row-gap: 1em;
     align-items: center;
     z-index: 99;
@@ -182,7 +184,7 @@
 
 .social-media-feed {
     width: auto;
-    aspect-ratio: 9/27;
+    aspect-ratio: 2/5;
     display: flex;
     flex-direction: column;
     row-gap: 0.5em;
@@ -230,6 +232,10 @@
 
 .link-text-light:hover {
     color: #f8f9fa !important;
+}
+
+.main-body-div {
+    margin-top: 80px;
 }
 
 .news-list {
