@@ -661,11 +661,15 @@ window.onload = () => {
     urlSearchParams = new URLSearchParams(window.location.search)
     if (!urlSearchParams.has("article")) {
         // No article specified
+        // Send the user to the error 404 page
+        window.location.href = "./404.html"
     }
     else {
         let article = urlSearchParams.get("article")
         if (!articleData[article]) {
             // Invalid Article
+            // Send the user to the error 404 page
+            window.location.href = "./404.html"
         }
         else {
             addArticle(articleData[article])
