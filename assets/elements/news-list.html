@@ -1,10 +1,10 @@
 <script id="news-list-template" type="text/x-handlebars-template">
-    <article>
+    <article onclick="window.location.href=`./article.html?article={{file}}`">
         <img src="{{image}}" alt="image">
         <div class="news-list-article-content">
             <em>{{dateAndTime postDate}}</em>
             <h5 class="m-0">{{title}}</h5>
-            <p class="m-0">{{subtitle}}</p>
+            <!-- <p class="m-0">{{subtitle}}</p> -->
         </div>
     </article>
 </script>

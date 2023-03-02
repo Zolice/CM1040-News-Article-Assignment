@@ -154,7 +154,7 @@ window.onload = () => {
     addHeader(true)
     addSidebar()
     addNewsHighlight()
-    addNewsList("Latest News", $('#news-list'), latestNewsData)
+    addNewsList("Latest News", latestNewsData)
 }
 
 function addNewsHighlight() {

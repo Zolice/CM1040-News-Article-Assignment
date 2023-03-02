@@ -7,7 +7,7 @@
 <div id="news-secondary-highlight" class="news-highlight-secondary text-dark"></div>
 
 <script id="news-main-highlight-template" type="text/x-handlebars-template">
-    <div id="news-highlight-article" class="news-highlight-article text-light">
+    <div id="news-highlight-article" class="news-highlight-article text-light" onclick="window.location.href=`./article.html?article={{file}}`">
         <div class="news-highlight-article-grid">
             <img src="{{image}}">
             <h4 class="m-0 pt-3 px-3">{{title}}</h3>
@@ -19,7 +19,7 @@
 </script>
 
 <script id="news-secondary-highlight-template" type="text/x-handlebars-template">
-    <article id="news-highlight-secondary" style="display: flex;">
+    <article id="news-highlight-secondary" style="display: flex;" onclick="window.location.href=`./article.html?article={{file}}`">
         <img src="{{image}}">
         <em>{{dateAndTime postDate}}</em>
         <h5 class="m-0">{{title}}</h5>

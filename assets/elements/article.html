@@ -5,5 +5,20 @@
         <img src="{{image}}" alt="article image">
         <em>{{imageDescription}}</em>
     </div>
+</script>
 
+<script id="article-author-template" type="text/x-handlebars-template">
+    <img src="{{authorImage}}" alt="author image">
+    <h5 class="m-0">{{author}}</h5>
+    <p class="m-0">{{dateAndTime postDate}}<br>Modified {{dateAndTime updateDate}}</p>
+    <div id="related-news-list" class="related-news-list py-4"></div>
+</script>
+
+<script id="news-list-template" type="text/x-handlebars-template">
+    <article onclick="window.location.href=`./article.html?article={{file}}`">
+        <img src="{{image}}" alt="image">
+        <div class="related-news-list-article-content">
+            <h6 class="m-0">{{title}}</h5>
+        </div>
+    </article>
 </script>

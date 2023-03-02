@@ -128,11 +128,11 @@ function addSocialMedia() {
     })
 }
 
-function addNewsList(name, jQueryElement, newsListData) {
-    jQueryElement.load('./assets/elements/news-list.html', function () {
+function addNewsList(name, newsListData) {
+    $(`#scripts`).load('./assets/elements/news-list.html', function () {
         var newsList = Handlebars.compile(document.getElementById('news-list-template').innerHTML)
         var newsListContent = document.getElementById("news-list")
-        if (!name) newsListContent.innerHTML = `<h3 class="m-0">${name}</h3>`
+        if (name) newsListContent.innerHTML = `<h3 class="m-0">${name}</h3>`
         newsListData.forEach((news) => {
             newsListContent.innerHTML += newsList(news)
         })
