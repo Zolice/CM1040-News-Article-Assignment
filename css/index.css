@@ -1,16 +1,3 @@
-.hero-image {
-    width: 100%;
-    height: 20em;
-}
-
-.hero-image>img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-    left: 0;
-}
-
 .category-and-highlights {
     height: 100%;
 }

@@ -664,7 +664,6 @@ window.onload = () => {
     }
     else {
         let article = urlSearchParams.get("article")
-        console.log(articleData[article])
         if (!articleData[article]) {
             // Invalid Article
         }

@@ -1,0 +1,37 @@
+.about-us {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: max-content 1fr max-content 1fr;
+    grid-template-rows: min-content min-content min-content auto min-content;
+    column-gap: 1em;
+    row-gap: 0.5em;
+}
+
+.contact-form-email-input {
+    grid-row: 2;
+    grid-column: 2 / span 3;
+}
+
+.contact-form-text {
+    grid-row: 3;
+    grid-column: 2 / span 3;
+    height: 8em;
+}
+
+.contact-form-submit {
+    grid-row: 4;
+    grid-column: 4;
+    width: min-content;
+    margin-left: auto;
+}

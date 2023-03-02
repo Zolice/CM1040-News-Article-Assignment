@@ -10,6 +10,10 @@ The name of the website is called "Newsforest", which is chosen as it implies a 
 
 The logo design features a stylized tree made up of the letters "N" and "F" to represent the name "Newsforest". The tree is surrounded by a circle to symbolize unity and the idea of a central source for news and information. The green colour represents growth, renewal, and the natural world, while the brown colour conveys strength and reliability.
 
+Our mission at Newsforest is to provide a comprehensive source of news and information to our readers. As our name suggests, we offer a diverse and rich selection of content on a range of topics, much like a forest is full of different trees and plants. 
+
+We believe in the power of journalism to inform, engage, and empower our readers, and strive to deliver high-quality journalism that reflects the values of our community. At Newsforest, we are dedicated to providing insightful and informative coverage that helps our readers make sense of the world around them.
+
 ## Built With
 * ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 * ![css](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
