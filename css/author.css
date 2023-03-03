@@ -1,0 +1,32 @@
+.author-header {
+    display: flex;
+    flex-direction: row;
+    column-gap: 1em;
+}
+
+.author-name-disc {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}
+
+.author-header>img {
+    width: 12em;
+    max-width: 33%;
+    aspect-ratio: 1/1;
+    grid-column: 1;
+    grid-row: 1 / span 2;
+}
+
+.author-name-disc>h1 {
+    height: min-content;
+}
+
+.author-name-disc>h3 {
+}
+
+.author-info {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+}

@@ -699,9 +699,14 @@ function addArticle(articleData) {
             content += `<div class="article-image"><img src=${element.img} alt=${element.imgDescription} class="py-0">`
             content += `<em>${element.imgDescription}</em></div>`
         }
+        else if(element.em){
+            content += `<em>${element.em}</em>`
+        }
 
         articleBody.innerHTML += content
     })
+
+    articleBody.innerHTML += `<em>${articleData.source}</em>`
 }
 
 function articleNewsList() {

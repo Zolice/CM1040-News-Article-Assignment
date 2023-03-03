@@ -177,32 +177,62 @@ function addNewsHighlight() {
         newsMainHighlightContent.innerHTML += document.getElementById("news-main-highlight-carousel-buttons").innerHTML
         document.getElementById("news-main-highlight-carousel-buttons").innerHTML += newsMainHighlightButtons
         newsMainHighlightContent.innerHTML += document.getElementById("news-main-highlight-buttons").innerHTML
+
+        updateHighlightButtons()
+
         newsMainHighlightCarouselLoop()
     });
 }
 
 function newsMainHighlightCarouselLoop() {
     newsMainHighlightCarousel()
-    setTimeout(newsMainHighlightCarousel, 5000);
+    setTimeout(newsMainHighlightCarouselLoop, 5000);
 }
 
 function newsMainHighlightCarousel() {
-    var allNews = document.getElementsByClassName("news-highlight-article")
-
+    let allNews = document.getElementsByClassName("news-highlight-article")
     newsMainHighlightIndex += 1;
-    if (newsMainHighlightIndex >= 7) { newsMainHighlightIndex = 0 }
+    if (newsMainHighlightIndex >= allNews.length) { newsMainHighlightIndex = 0 }
+
+    setCarousel()
+}
+
+function newsMainHighlightCarouselNext() {
+    newsMainHighlightCarousel()
+}
+
+function newsMainHighlightCarouselBack() {
+    let allNews = document.getElementsByClassName("news-highlight-article")
+    newsMainHighlightIndex -= 1;
+    if (newsMainHighlightIndex <= 0) { newsMainHighlightIndex = allNews.length - 1 }
+
+    setCarousel()
+}
+
+function updateHighlightButtons() {
+    let buttons = document.getElementsByClassName("news-main-highlight-carousel-button")
+
+    for (let i = 0; i < buttons.length; i++) {
+        buttons[i].onclick = () => {
+            setCarousel(i)
+        }
+    }
+}
+
+function setCarousel(i = newsMainHighlightIndex) {
+    let allNews = document.getElementsByClassName("news-highlight-article")
+    let buttons = document.getElementsByClassName("news-main-highlight-carousel-button")
+    newsMainHighlightIndex = i
 
     for (let index = 0; index < allNews.length; index++) {
         if (index == newsMainHighlightIndex) {
             allNews[index].style.opacity = "1"
             allNews[index].style.height = "auto"
+            buttons[index].classList.add("news-main-highlight-carousel-button-active")
         } else {
             allNews[index].style.opacity = "0"
             allNews[index].style.height = "0"
+            buttons[index].classList.remove("news-main-highlight-carousel-button-active")
         }
     }
-}
-
-function newsMainHighlightCarouselNext() {
-    newsMainHighlightCarousel()
 }

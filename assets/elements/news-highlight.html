@@ -1,5 +1,5 @@
 <div id="news-main-highlight-carousel" class="news-main-highlight-carousel"></div>
-<div id="news-secondary-highlight" class="news-highlight-secondary text-dark row m-0"></div>
+<div id="news-secondary-highlight" class="news-highlight-secondary text-dark row px-2"></div>
 
 <script id="news-main-highlight-template" type="text/x-handlebars-template">
     <div id="news-highlight-article" class="news-highlight-article text-light" onclick="window.location.href=`./article.html?article={{file}}`">
@@ -12,7 +12,7 @@
 </script>
 
 <script id="news-secondary-highlight-template" type="text/x-handlebars-template">
-    <article id="news-highlight-secondary" class="col-md-4 px-0" style="display: flex;" onclick="window.location.href=`./article.html?article={{file}}`">
+    <article id="news-highlight-secondary" class="col-md-4 px-2" style="display: flex;" onclick="window.location.href=`./article.html?article={{file}}`">
         <img src="{{image}}">
         <em>{{dateAndTime postDate}}</em>
         <h5 class="m-0">{{title}}</h5>
