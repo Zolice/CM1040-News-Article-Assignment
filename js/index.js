@@ -174,11 +174,16 @@ function addNewsHighlight() {
             newsSecondaryHighlightContent.innerHTML += newsSecondaryHighlight(news)
         })
 
-        console.log(newsMainHighlightButtons)
         newsMainHighlightContent.innerHTML += document.getElementById("news-main-highlight-carousel-buttons").innerHTML
         document.getElementById("news-main-highlight-carousel-buttons").innerHTML += newsMainHighlightButtons
-        newsMainHighlightCarousel()
+        newsMainHighlightContent.innerHTML += document.getElementById("news-main-highlight-buttons").innerHTML
+        newsMainHighlightCarouselLoop()
     });
+}
+
+function newsMainHighlightCarouselLoop() {
+    newsMainHighlightCarousel()
+    setTimeout(newsMainHighlightCarousel, 5000);
 }
 
 function newsMainHighlightCarousel() {
@@ -196,9 +201,8 @@ function newsMainHighlightCarousel() {
             allNews[index].style.height = "0"
         }
     }
-    setTimeout(newsMainHighlightCarousel, 5000);
 }
 
 function newsMainHighlightCarouselNext() {
-    // alert()
+    newsMainHighlightCarousel()
 }
