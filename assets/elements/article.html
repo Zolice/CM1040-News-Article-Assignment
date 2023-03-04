@@ -8,11 +8,12 @@
 </script>
 
 <script id="article-author-template" type="text/x-handlebars-template">
-    <img src="{{authorImage}}" alt="author image">
-    <h5 class="m-0">{{author}}</h5>
+    <a href="./author.html?author={{authorLink author}}" class="author-link link-text-dark">
+        <img src="{{authorImage}}" alt="author image">
+        <h5 class="m-0">{{author}}</h5>
+    </a>
     <p class="m-0">{{dateAndTime postDate}}<br>Modified {{dateAndTime updateDate}}</p>
-    <div id="related-news-list" class="related-news-list py-4 d-none d-sm-block d-sm-grid"></div>
-    <!-- d-none d-sm-block d-sm-grid -->
+    <div id="related-news-list" class="related-news-list py-4"></div>
 </script>
 
 <script id="news-list-template" type="text/x-handlebars-template">

@@ -74,6 +74,13 @@ function handlebarsHelper() {
             return profileImage
         }
     })
+
+    Handlebars.registerHelper("authorLink", function (authorName) {
+        while (authorName.indexOf(" ") != -1) {
+            authorName = authorName.replace(" ", "")
+        }
+        return authorName.toLowerCase()
+    })
 }
 
 function setHeaderStyle(index) {
