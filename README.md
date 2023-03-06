@@ -4,7 +4,7 @@ Project assigned by SIM GE - UOL for the purpose of CM1040 Web Development
 This project contains the source code of the newspaper website project for the assignment. 
 
 ## Newsforest
-<img src="./images/Newsforest%20Logo.png" style="width: 256px">
+<img src="./images/Newsforest-Logo.png" style="width: 256px">
 
 The name of the website is called "Newsforest", which is chosen as it implies a wealth of information and knowledge, must like a forest is full of different types of trees and plants. The name suggests that the website is a source of wide variety of news stories and articles, providing readers with a diverse and rich selection of content to choose from. 
 
@@ -19,6 +19,8 @@ We believe in the power of journalism to inform, engage, and empower our readers
 * ![css](https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white)
 * ![js](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 * ![bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+* ![jquery](https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white)
 
 # Acknowledgements
 * Royalty-Free Images from [Unsplash](https://unsplash.com/)
+* News Articles from [CNA](https://www.channelnewsasia.com/)
