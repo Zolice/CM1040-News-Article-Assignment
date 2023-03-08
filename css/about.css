@@ -11,11 +11,20 @@
 }
 
 .contact-form {
-    display: grid;
-    grid-template-columns: max-content 1fr max-content 1fr;
-    grid-template-rows: min-content min-content min-content auto min-content;
-    column-gap: 1em;
-    row-gap: 0.5em;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media only screen and (min-width: 597px) {
+    .contact-form {
+        display: grid;
+        grid-template-columns: max-content 1fr max-content 1fr;
+        grid-template-rows: min-content min-content min-content auto min-content;
+        column-gap: 1em;
+        row-gap: 0.5em;
+        width: 100%;
+    }
 }
 
 .contact-form-email-input {

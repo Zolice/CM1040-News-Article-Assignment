@@ -147,6 +147,7 @@
     background-position: center;
     background-size: cover;
     /* column-gap: 1em; */
+    row-gap: 1em;
 }
 
 .news-highlight-secondary>article {
