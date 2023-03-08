@@ -17,23 +17,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.min.js"></script>
     <script src="./js/404.js"></script>
     <script src="./js/general.js"></script>
-    
+
     <link rel="import" href="./assets/elements/header.html">
 </head>
 
 <body>
-    <div id="header-div" class="header text-light"></div>
+    <div id="header-div" class="header text-light" role="banner"></div>
     <div id="hero-image" class="hero-image">
         <img src="./images/splash-image-edited-resized.jpg">
     </div>
 
     <div id="main-body" class="container py-3 main">
         <div class="row">
-            <div id="main-content" class="col-md-9 px-0 pr-2">
+            <div id="main-content" class="col-md-9 px-0 pr-2" role="main">
                 <div class="error">
                     <h1>404</h1>
 
-                    <h6>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</h6>
+                    <h6>The page you are looking for might have been removed, had its name changed, or is temporarily
+                        unavailable.</h6>
 
                     <h6 id="countdown"></h6>
                     <a href="index.html">Click here to skip the timer.</a>
@@ -41,14 +42,10 @@
                     <div id="news-list" class="news-list p-0"></div>
                 </div>
             </div>
-            <div id="sidebar" class="col-md-3 px-0">
-
-            </div>
+            <div id="sidebar" class="col-md-3 px-0" role="complementary"></div>
         </div>
-
-
     </div>
-    <footer id="footer" class="bg-dark"></footer>
+    <footer id="footer" class="bg-dark" role="contentinfo"></footer>
     <div id="scripts"></div>
 </body>
 
