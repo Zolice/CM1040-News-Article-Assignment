@@ -47,6 +47,20 @@ var newsMainHighlightData = [
         postDate: "2021-05-21T06:01",
         file: "commentary-us-fed-global-minimum-corporate-tax-haven-singapore-g7-1421351",
         image: "https://onecms-res.cloudinary.com/image/upload/s--MIzpcrY8--/c_fill,g_auto,h_468,w_830/f_auto,q_auto/a-woman-walks-along-a-promenade-at-the-raffles-place-financial-business-district.jpg?itok=wsYlKXjB"
+    },
+    {
+        title: "Commentary: Work colleagues need new ways to feel like a team again",
+        subtitle: "It’s hard to feel like part of a team without the human connection of grabbing coffee and making small talk, and that may be bad news for innovation, says Sam Neo.",
+        postDate: "2021-11-24T06:11:00.000Z",
+        file: "commentary-colleagues-team-bonding-disconnected-work-home-2316671",
+        image: "https://onecms-res.cloudinary.com/image/upload/s--jQrD5T_v--/c_fill,g_auto,h_468,w_830/f_auto,q_auto/v1/mediacorp/cna/image/2021/11/23/istock-1227389550.jpg?itok=nXbJvZ2D"
+    },
+    {
+        title: "Commentary: Cubicle romances and stolen glances in the office pantry – is it ever OK to date a colleague?",
+        subtitle: "Dating among colleagues is bound to happen, but is there a need to restrict or ban office romances? HR expert Sam Neo weighs in on the issue of workplace romances.",
+        postDate: "2023-01-29T06:00:00.000Z",
+        file: "commentary-office-romances-dating-colleague-coworker-love-relationship-3185111",
+        image: "https://onecms-res.cloudinary.com/image/upload/s--dS2u-7jJ--/c_fill,g_auto,h_468,w_830/f_auto,q_auto/v1/mediacorp/cna/image/2023/01/05/istock-1361530120.jpg?itok=gCMYizn6"
     }
 ]
 
@@ -144,6 +158,20 @@ var latestNewsData = [
         postDate: "2022-02-21T11:39",
         file: "commentary-singapore-tax-burden-gst-revenue-consumption-2508441",
         image: "https://onecms-res.cloudinary.com/image/upload/s--GTkSPkK9--/c_crop,h_466,w_830,x_0,y_40/c_fill,g_auto,h_468,w_830/fl_relative,g_south_east,l_mediacorp:cna:watermark:2021-08:cna,w_0.1/f_auto,q_auto/v1/mediacorp/cna/image/2021-09/jem_0026.jpg?itok=PA2gnDdQ"
+    },
+    {
+        title: "Commentary: Work colleagues need new ways to feel like a team again",
+        subtitle: "It’s hard to feel like part of a team without the human connection of grabbing coffee and making small talk, and that may be bad news for innovation, says Sam Neo.",
+        postDate: "2021-11-24T06:11:00.000Z",
+        file: "commentary-colleagues-team-bonding-disconnected-work-home-2316671",
+        image: "https://onecms-res.cloudinary.com/image/upload/s--jQrD5T_v--/c_fill,g_auto,h_468,w_830/f_auto,q_auto/v1/mediacorp/cna/image/2021/11/23/istock-1227389550.jpg?itok=nXbJvZ2D"
+    },
+    {
+        title: "Commentary: Cubicle romances and stolen glances in the office pantry – is it ever OK to date a colleague?",
+        subtitle: "Dating among colleagues is bound to happen, but is there a need to restrict or ban office romances? HR expert Sam Neo weighs in on the issue of workplace romances.",
+        postDate: "2023-01-29T06:00:00.000Z",
+        file: "commentary-office-romances-dating-colleague-coworker-love-relationship-3185111",
+        image: "https://onecms-res.cloudinary.com/image/upload/s--dS2u-7jJ--/c_fill,g_auto,h_468,w_830/f_auto,q_auto/v1/mediacorp/cna/image/2023/01/05/istock-1361530120.jpg?itok=gCMYizn6"
     }
 ]
 
