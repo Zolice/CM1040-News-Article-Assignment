@@ -55,17 +55,21 @@ var lightHeader
 
 var sidebar
 
+// Load Handlebars Helpers and Footer
 function generalOnload() {
     handlebarsHelper()
     addFooter()
 }
 
+// Register helpers for Handlebars
 function handlebarsHelper() {
+    // Convert time to date and time
     Handlebars.registerHelper("dateAndTime", function (time) {
         var date = new Date(time)
         return date.toDateString() + ", " + date.toLocaleTimeString()
     })
 
+    // Use the default profile picture if the user does not have a profile picture
     Handlebars.registerHelper("profileImageHelper", function (profileImage) {
         if (profileImage == undefined) {
             return "./images/social-media/sample_profile_picture.png"
@@ -75,6 +79,7 @@ function handlebarsHelper() {
         }
     })
 
+    // Convert author's name to lowercase and remove spaces, to be used as a link
     Handlebars.registerHelper("authorLink", function (authorName) {
         while (authorName.indexOf(" ") != -1) {
             authorName = authorName.replace(" ", "")
@@ -83,6 +88,7 @@ function handlebarsHelper() {
     })
 }
 
+// If the user scrolls below the Hero Image, change the header style
 function setHeaderStyle(index) {
     if (!index) {
         header.classList.add("header-light")
@@ -103,6 +109,7 @@ function setHeaderStyle(index) {
     }
 }
 
+// Load the header, index is used to determine if there is a Hero Image
 function addHeader(index) {
     header = document.getElementById('header-div')
 
@@ -110,23 +117,29 @@ function addHeader(index) {
         darkHeader = document.getElementById('header-dark')
         lightHeader = document.getElementById('header-light')
 
+        // Adjust the header style on first load
         setHeaderStyle(index)
+        
+        // If there is a Hero Image, set the header style when the user scrolls
         if (index) {
             window.addEventListener("scroll", setHeaderStyle)
         }
     });
 }
 
+// Load the Footer
 function addFooter() {
     $('#footer').load('./assets/elements/footer.html');
 }
 
+// Load the Sidebar consisting of Social Media Feed
 function addSidebar() {
     $('#sidebar').load('./assets/elements/social-media-feed.html', function () {
         addSocialMedia()
     });
 }
 
+// Update the Social Media Feed to contain posts
 function addSocialMedia() {
     socialMediaTemplate = Handlebars.compile(document.getElementById("social-media-feed-article-template").innerHTML)
 
@@ -135,6 +148,7 @@ function addSocialMedia() {
     })
 }
 
+// Load the News List with the given name and data, into the element "news-list"
 function addNewsList(name, newsListData) {
     $(`#scripts`).load('./assets/elements/news-list.html', function () {
         var newsList = Handlebars.compile(document.getElementById('news-list-template').innerHTML)

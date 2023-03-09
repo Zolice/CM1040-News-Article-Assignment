@@ -658,6 +658,7 @@ window.onload = () => {
     generalOnload()
     addHeader(false)
 
+    // Get the Parameters to find the article
     urlSearchParams = new URLSearchParams(window.location.search)
     if (!urlSearchParams.has("article")) {
         // No article specified
@@ -672,11 +673,13 @@ window.onload = () => {
             window.location.href = "./404.html"
         }
         else {
+            // Article exists, load the article
             addArticle(articleData[article])
         }
     }
 }
 
+// Add the article to the page
 function addArticle(articleData) {
     $('#scripts').load('./assets/elements/article.html', function () {
         var articleHeader = Handlebars.compile(document.getElementById('article-header-template').innerHTML)
@@ -690,25 +693,31 @@ function addArticle(articleData) {
     articleData.content.forEach(element => {
         var content = ""
         if (element.p) {
+            // Element contains a paragraph
             if (element.h2) {
+                // Element contains a header
                 content += `<h4 class=my-0>${element.h2}</h4>`
             }
             content += `<p class=my-0>${element.p}</p>`
         }
         else if (element.img) {
+            // Element contains an image
             content += `<div class="article-image"><img src=${element.img} alt=${element.imgDescription} class="py-0">`
             content += `<em>${element.imgDescription}</em></div>`
         }
-        else if(element.em){
+        else if (element.em) {
+            // Element contains an emphasis
             content += `<em>${element.em}</em>`
         }
 
+        // Add the content to the article
         articleBody.innerHTML += content
     })
-
+    // Add the source to the end of the article
     articleBody.innerHTML += `<em>${articleData.source}</em>`
 }
 
+// Add the related news to the page
 function articleNewsList() {
     var newsList = Handlebars.compile(document.getElementById('news-list-template').innerHTML)
     var newsListContent = document.getElementById("related-news-list")

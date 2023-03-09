@@ -108,6 +108,7 @@ window.onload = () => {
     addHeader(false)
     addSidebar()
 
+    // Get the author name from the URL
     urlSearchParams = new URLSearchParams(window.location.search)
     if (!urlSearchParams.has("author")) {
         // No author specified
@@ -122,11 +123,13 @@ window.onload = () => {
             window.location.href = "./404.html"
         }
         else {
+            // Author exists, add the author page
             addAuthor(authorData[author])
         }
     }
 }
 
+// Add the author page
 function addAuthor(data) {
     console.log(data)
     $('#scripts').load('./assets/elements/author.html', function () {
@@ -137,5 +140,6 @@ function addAuthor(data) {
         document.getElementById("author-info").innerHTML = authorabout(data)
     })
 
+    // Add the author's articles
     addNewsList(data.name + "'s Articles", data.articles)
 }

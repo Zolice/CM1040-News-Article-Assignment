@@ -175,7 +175,7 @@ var latestNewsData = [
     }
 ]
 
-var newsMainHighlightIndex = 999
+var newsMainHighlightIndex = 999 // Index will reset to 0 on starting
 
 window.onload = () => {
     generalOnload()
@@ -185,38 +185,48 @@ window.onload = () => {
     addNewsList("Latest News", latestNewsData)
 }
 
+// Add News Highlights to showcase featured news/headlines
 function addNewsHighlight() {
     $('#news-highlight').load('./assets/elements/news-highlight.html', function () {
+        // Get all the elements
         var newsMainHighlight = Handlebars.compile(document.getElementById('news-main-highlight-template').innerHTML)
         var newsSecondaryHighlight = Handlebars.compile(document.getElementById('news-secondary-highlight-template').innerHTML)
         var newsMainHighlightContent = document.getElementById("news-main-highlight-carousel")
         var newsSecondaryHighlightContent = document.getElementById("news-secondary-highlight")
         var newsMainHighlightButtons = ""
 
+        // Add the articles
         newsMainHighlightData.forEach((news) => {
             newsMainHighlightContent.innerHTML += newsMainHighlight(news)
+            // Add a button for each article added
             newsMainHighlightButtons += document.getElementById("news-main-highlight-carousel-button").innerHTML
         })
 
+        // Add the articles
         newsSecondaryHighlightData.forEach((news) => {
             newsSecondaryHighlightContent.innerHTML += newsSecondaryHighlight(news)
         })
 
+        // Add the buttons to the page
         newsMainHighlightContent.innerHTML += document.getElementById("news-main-highlight-carousel-buttons").innerHTML
         document.getElementById("news-main-highlight-carousel-buttons").innerHTML += newsMainHighlightButtons
         newsMainHighlightContent.innerHTML += document.getElementById("news-main-highlight-buttons").innerHTML
 
+        // Update the buttons active state on first load
         updateHighlightButtons()
 
+        // Start the carousel loop
         newsMainHighlightCarouselLoop()
     });
 }
 
+// Carousel Loop, repeats every 5 seconds
 function newsMainHighlightCarouselLoop() {
     newsMainHighlightCarousel()
     setTimeout(newsMainHighlightCarouselLoop, 5000);
 }
 
+// Moves the Carousel to the next article
 function newsMainHighlightCarousel() {
     let allNews = document.getElementsByClassName("news-highlight-article")
     newsMainHighlightIndex += 1;
@@ -225,10 +235,12 @@ function newsMainHighlightCarousel() {
     setCarousel()
 }
 
+// Moves the Carousel to the next article on button click
 function newsMainHighlightCarouselNext() {
     newsMainHighlightCarousel()
 }
 
+// Moves the Carousel to the previous article on button click
 function newsMainHighlightCarouselBack() {
     let allNews = document.getElementsByClassName("news-highlight-article")
     newsMainHighlightIndex -= 1;
@@ -237,6 +249,7 @@ function newsMainHighlightCarouselBack() {
     setCarousel()
 }
 
+// Updates the buttons active state
 function updateHighlightButtons() {
     let buttons = document.getElementsByClassName("news-main-highlight-carousel-button")
 
@@ -247,6 +260,7 @@ function updateHighlightButtons() {
     }
 }
 
+// Sets the carousel to the article at index i
 function setCarousel(i = newsMainHighlightIndex) {
     let allNews = document.getElementsByClassName("news-highlight-article")
     let buttons = document.getElementsByClassName("news-main-highlight-carousel-button")

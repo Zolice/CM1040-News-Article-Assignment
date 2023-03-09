@@ -4,7 +4,7 @@
     row-gap: 0.5em;
 }
 
-.group-1{
+.group{
     display: flex;
     flex-direction: column;
 }
