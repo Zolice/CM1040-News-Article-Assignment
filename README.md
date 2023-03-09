@@ -14,6 +14,10 @@ Our mission at Newsforest is to provide a comprehensive source of news and infor
 
 We believe in the power of journalism to inform, engage, and empower our readers, and strive to deliver high-quality journalism that reflects the values of our community. At Newsforest, we are dedicated to providing insightful and informative coverage that helps our readers make sense of the world around them.
 
+## Report
+The report for this assignment can be found as `./report.html`. 
+A pdf copy of the report, written in Microsoft Word can also be found as `./report.pdf`.
+
 ## Built With
 * <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5">
 * <img src="https://img.shields.io/badge/CSS-239120?&style=for-the-badge&logo=css3&logoColor=white" alt="css">
