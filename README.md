@@ -22,6 +22,15 @@ We believe in the power of journalism to inform, engage, and empower our readers
 * <a href="https://handlebarsjs.com/"><img src="https://img.shields.io/badge/Handlebars-f0772b?style=for-the-badge&logo=handlebars&logoColor=white" alt="handlebars"></a>
 * <a href="https://jquery.com/"><img src="https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white" alt="jquery"></a>
 
+# Applications and Resources
+* <a href="https://github.com/"><img src="https://img.shields.io/badge/GitHub-black?style=for-the-badge&logo=github&logoColor=white" alt="github"></a>
+* <a href="https://www.adobe.com/sg/products/photoshop.html"><img src="https://img.shields.io/badge/Photoshop-001d34?style=for-the-badge&logo=photoshop&logoColor=2fa3f7" alt="photoshop"></a>
+* <a href="https://www.figma.com/"><img src="https://img.shields.io/badge/Figma-1e1e1e?style=for-the-badge&logo=figma&logoColor=f24e1e" alt="figma"></a>
+* <a href="https://code.visualstudio.com/"><img src="https://img.shields.io/badge/Visual Studio Code-218bd3?style=for-the-badge&logo=visualstudio&logoColor=white" alt="vscode"></a>
+* <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer"><img src="https://img.shields.io/badge/Live Server-41205f?style=for-the-badge&logo=liveserver&logoColor=white" alt="vscode"></a>
+* <a href="https://unsplash.com/"><img src="https://img.shields.io/badge/Unsplash-black?style=for-the-badge&logo=unsplash&logoColor=white" alt="unsplash"></a>
+* <a href="https://www.channelnewsasia.com/"><img src="https://img.shields.io/badge/CNA-b50000?style=for-the-badge&logo=cna&logoColor=white" alt="cna"></a>
+
 # Acknowledgements
 * Royalty-Free Images from [Unsplash](https://unsplash.com/)
 * News Articles from [CNA](https://www.channelnewsasia.com/)
